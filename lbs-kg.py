@@ -1,6 +1,5 @@
 from tkinter import *
 from tkinter import messagebox as msg
-import random
 
 class lbs_to_kg():
     def __init__(self,master):
