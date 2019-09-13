@@ -88,7 +88,7 @@ class ft_to_m():
                 
             elif self.varfrom.get() == "M":
                 value = float(self.textname.get(1.0,END))/0.3048
-                with open('ft_to_m.csv.csv', 'a+') as f:
+                with open('ft_to_m.csv', 'a+') as f:
                     thewriter = csv.writer(f)
                     thewriter.writerow([str(value),str(float(self.textname.get(1.0,END)))])
                     f.close()
