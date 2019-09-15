@@ -50,6 +50,10 @@ class lbs_to_kg():
         self.file_menu.add_command(label="Exit",accelerator= 'Alt+F4',command = self.exitmenu)
         self.menu.add_cascade(label = "File",menu=self.file_menu)
         
+        self.show_menu = Menu(self.menu,tearoff = 0)
+        self.show_menu.add_command(label = "Show Convertions",command = self.showconv)
+        self.menu.add_cascade(label = "Show",menu = self.show_menu)
+        
         self.about_menu = Menu(self.menu,tearoff = 0)
         self.about_menu.add_command(label = "About",accelerator= 'Ctrl+I',command=self.aboutmenu)
         self.menu.add_cascade(label="About",menu=self.about_menu)
@@ -62,6 +66,10 @@ class lbs_to_kg():
         self.master.bind('<Alt-F4>',lambda event: self.exitmenu())
         self.master.bind('<Control-F1>',lambda event: self.helpmenu())
         self.master.bind('<Control-i>',lambda event:self.aboutmenu())
+       
+    def showconv(self):
+        df = pd.read_csv('lbs_to_kg.csv')
+        msg.showinfo("LBS TO KG", str(df))
     
     def conv(self):
         corf = 0
