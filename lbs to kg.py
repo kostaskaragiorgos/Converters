@@ -3,6 +3,7 @@ from tkinter import messagebox as msg
 
 import csv
 import os 
+import pandas as pd
 
 class lbs_to_kg():
     def __init__(self,master):
