@@ -52,7 +52,7 @@ class ft_to_m():
         self.menu.add_cascade(label = "File",menu=self.file_menu)
         
         self.show_menu = Menu(self.menu,tearoff = 0)
-        self.show_menu.add_command(label = "Show Convertions",command = self.showconv)
+        self.show_menu.add_command(label = "Show Convertions",accelerator = 'Ctrl+S',command = self.showconv)
         self.menu.add_cascade(label = "Show",menu = self.show_menu)
         
         self.about_menu = Menu(self.menu,tearoff = 0)
@@ -67,6 +67,7 @@ class ft_to_m():
         self.master.bind('<Alt-F4>',lambda event: self.exitmenu())
         self.master.bind('<Control-F1>',lambda event: self.helpmenu())
         self.master.bind('<Control-i>',lambda event:self.aboutmenu())
+        self.master.bind('<Control-s>',lambda event:self.showconv())
         
     def showconv(self):
         df = pd.read_csv('ft_to_m.csv')
