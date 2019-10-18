@@ -48,6 +48,7 @@ class lbs_to_kg():
         self.menu = Menu(self.master)
         
         self.file_menu = Menu(self.menu,tearoff = 0)
+        self.file_menu.add_command(label = "Convert",accelerator = 'Ctrl+T',command = self.conv)
         self.file_menu.add_command(label="Exit",accelerator= 'Alt+F4',command = self.exitmenu)
         self.menu.add_cascade(label = "File",menu=self.file_menu)
         
@@ -68,6 +69,7 @@ class lbs_to_kg():
         self.master.bind('<Control-F1>',lambda event: self.helpmenu())
         self.master.bind('<Control-i>',lambda event:self.aboutmenu())
         self.master.bind('<Control-s>',lambda event:self.showconv())
+        self.master.bind('<Control-t>',lambda event:self.conv())
         
     def showconv(self):
         df = pd.read_csv('lbs_to_kg.csv')
