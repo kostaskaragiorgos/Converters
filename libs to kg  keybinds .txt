@@ -1,5 +1,6 @@
 File menu
 =======================
+Convert Ctrl + T
 Exit Alt + F4
 =======================
 Show menu
