@@ -16,7 +16,6 @@ class lbs_to_kg():
             with open('lbs_to_kg.csv', 'a+') as f:
                 thewriter = csv.writer(f)
                 thewriter.writerow(['LBS','KG'])
-                f.close()
         
         self.amleb = Label(self.master,text = "Amount")
         self.amleb.pack()
@@ -95,7 +94,7 @@ class lbs_to_kg():
                 with open('lbs_to_kg.csv', 'a+') as f:
                     thewriter = csv.writer(f)
                     thewriter.writerow([str(float(self.textname.get(1.0,END))),str(value)])
-                    f.close()
+
                 msg.showinfo("LBS TO KG", str(float(self.textname.get(1.0,END)))+" LBS ARE "+str(value)+" KG ")
                 
             elif self.varfrom.get() == "KG":
@@ -103,7 +102,7 @@ class lbs_to_kg():
                 with open('lbs_to_kg.csv', 'a+') as f:
                     thewriter = csv.writer(f)
                     thewriter.writerow([str(value),str(float(self.textname.get(1.0,END)))])
-                    f.close()
+
                 msg.showinfo("KG TO LBS",str(float(self.textname.get(1.0,END)))+" KG ARE " +str(value)+" LBS ")
                
            
