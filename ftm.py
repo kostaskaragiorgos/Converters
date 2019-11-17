@@ -16,7 +16,7 @@ class ft_to_m():
             with open('ft_to_m.csv', 'a+') as f:
                 thewriter = csv.writer(f)
                 thewriter.writerow(['FT','M'])
-                f.close()
+
         
         self.amleb = Label(self.master,text = "Amount")
         self.amleb.pack()
@@ -95,7 +95,7 @@ class ft_to_m():
                 with open('ft_to_m.csv', 'a+') as f:
                     thewriter = csv.writer(f)
                     thewriter.writerow([str(float(self.textname.get(1.0,END))),str(value)])
-                    f.close()
+                    
                 msg.showinfo("FT TO M", str(float(self.textname.get(1.0,END)))+" FT ARE "+str(value)+" M ")
                 
             elif self.varfrom.get() == "M":
@@ -103,7 +103,6 @@ class ft_to_m():
                 with open('ft_to_m.csv', 'a+') as f:
                     thewriter = csv.writer(f)
                     thewriter.writerow([str(value),str(float(self.textname.get(1.0,END)))])
-                    f.close()
                 msg.showinfo("M TO FT",str(float(self.textname.get(1.0,END)))+" M ARE " +str(value)+" FT ")
                
         
