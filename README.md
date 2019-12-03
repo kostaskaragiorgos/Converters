@@ -16,6 +16,14 @@ You need to convert lbs to kg or vice versa
 
 <p><img src ="lbs to kg converter.png" title = "lbs to kg converter Version"/> </p>
 
+## Keybinds 
+<ul>
+  <li> Convert(Ctrl+T) </li>
+  <li> Exit(Alt+F4) </li>
+  <li> Show Convertions(Alt+S) </li>
+  <li> About(Ctrl+I) </li>
+  <li> Help(Ctrl+F1) </li>
+</ul>
 
 ## FT TO M CONVERTER
 
@@ -31,5 +39,14 @@ You need to convert lbs to kg or vice versa
  **Current Version**
  
  <p><img src ="ft to m.png" title = "ft to m converter Version"/> </p>
+
+## Keybinds 
+<ul>
+  <li> Convert(Ctrl+T) </li>
+  <li> Exit(Alt+F4) </li>
+  <li> Show Convertions(Alt+S) </li>
+  <li> About(Ctrl+I) </li>
+  <li> Help(Ctrl+F1) </li>
+</ul>
 
  
