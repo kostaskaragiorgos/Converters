@@ -8,7 +8,7 @@
   <li> ftm.py(main ftm file) </li>
   <li> libs to kg keybinds(keybinds file) </li>
   <li> libs to kg.py(main libs to kg file) </li>
- <ul>
+ </ul>
 
 ## LBS TO KG CONVERTER
 
