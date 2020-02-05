@@ -96,6 +96,7 @@ class lbs_to_kg():
                     thewriter.writerow([str(float(self.textname.get(1.0,END))),str(value)])
 
                 msg.showinfo("LBS TO KG", str(float(self.textname.get(1.0,END)))+" LBS ARE "+str(value)+" KG ")
+                self.textname.delete(1.0,END)
                 
             elif self.varfrom.get() == "KG":
                 value = float(self.textname.get(1.0,END))*2.20462
@@ -104,9 +105,8 @@ class lbs_to_kg():
                     thewriter.writerow([str(value),str(float(self.textname.get(1.0,END)))])
 
                 msg.showinfo("KG TO LBS",str(float(self.textname.get(1.0,END)))+" KG ARE " +str(value)+" LBS ")
+                self.textname.delete(1.0,END)
                
-           
-        
     def exitmenu(self):
         if msg.askokcancel("Quit?", "Really quit?"):
             self.master.destroy()
