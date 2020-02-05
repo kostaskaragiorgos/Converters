@@ -97,6 +97,7 @@ class ft_to_m():
                     thewriter.writerow([str(float(self.textname.get(1.0,END))),str(value)])
                     
                 msg.showinfo("FT TO M", str(float(self.textname.get(1.0,END)))+" FT ARE "+str(value)+" M ")
+                self.textname.delete(1.0,END)
                 
             elif self.varfrom.get() == "M":
                 value = float(self.textname.get(1.0,END))/0.3048
@@ -104,6 +105,7 @@ class ft_to_m():
                     thewriter = csv.writer(f)
                     thewriter.writerow([str(value),str(float(self.textname.get(1.0,END)))])
                 msg.showinfo("M TO FT",str(float(self.textname.get(1.0,END)))+" M ARE " +str(value)+" FT ")
+                self.textname.delete(1.0,END)
                
         
     def exitmenu(self):
