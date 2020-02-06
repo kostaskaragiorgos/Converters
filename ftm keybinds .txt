@@ -5,7 +5,7 @@ Exit Alt + F4
 =======================
 Edit
 ========================
-Clear text field Alt + s
+Clear text field Alt + S
 ========================
 Show menu
 ============================
