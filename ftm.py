@@ -51,6 +51,10 @@ class ft_to_m():
         self.file_menu.add_command(label = "Convert",accelerator = 'Ctrl+T',command = self.conv)
         self.file_menu.add_command(label="Exit",accelerator= 'Alt+F4',command = self.exitmenu)
         self.menu.add_cascade(label = "File",menu=self.file_menu)
+
+        self.edit_menu = Menu ( self.menu,tearoff = 0)
+        self.edit_menu.add_command(label = "Clear text field",command = self.cleart)
+        self.menu.add_cascade(label = "Edit" , menu  = self.edit_menu)
         
         self.show_menu = Menu(self.menu,tearoff = 0)
         self.show_menu.add_command(label = "Show Convertions",accelerator = 'Ctrl+S',command = self.showconv)
@@ -70,6 +74,9 @@ class ft_to_m():
         self.master.bind('<Control-i>',lambda event:self.aboutmenu())
         self.master.bind('<Control-s>',lambda event:self.showconv())
         self.master.bind('<Control-t>',lambda event:self.conv())
+
+    def cleart(self):
+        self.textname.delete(1.0,END)
         
     def showconv(self):
         df = pd.read_csv('ft_to_m.csv')
@@ -85,7 +92,7 @@ class ft_to_m():
                     corf = 1
                 else:
                     msg.showerror("Value Error", "Enter a number higher than zero")
-                    self.textname.delete(0,END)
+                    self.textname.delete(1.0,END)
             except:
                 msg.showerror("Value Error", "Enter a number higher than zero")
                 self.textname.delete(1.0,END)
