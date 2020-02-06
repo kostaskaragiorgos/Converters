@@ -31,7 +31,8 @@ You need to convert lbs to kg or vice versa
 <ul>
   <li> Convert(Ctrl+T) </li>
   <li> Exit(Alt+F4) </li>
-  <li> Show Convertions(Alt+S) </li>
+  <li> Clear text field(Alt+S) </li>
+  <li> Show Convertions(Control+S) </li>
   <li> About(Ctrl+I) </li>
   <li> Help(Ctrl+F1) </li>
 </ul>
@@ -57,7 +58,8 @@ You need to convert lbs to kg or vice versa
 <ul>
   <li> Convert(Ctrl+T) </li>
   <li> Exit(Alt+F4) </li>
-  <li> Show Convertions(Alt+S) </li>
+  <li> Clear text field(Alt+S) </li>
+  <li> Show Convertions(Control+S) </li>
   <li> About(Ctrl+I) </li>
   <li> Help(Ctrl+F1) </li>
 </ul>
