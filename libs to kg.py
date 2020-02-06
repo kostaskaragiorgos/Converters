@@ -52,7 +52,7 @@ class lbs_to_kg():
         self.menu.add_cascade(label = "File",menu=self.file_menu)
 
         self.edit_menu = Menu ( self.menu,tearoff = 0)
-        self.edit_menu.add_command(label = "Clear text field",command = self.cleart)
+        self.edit_menu.add_command(label = "Clear text field",accelerator = 'Alt + S',command = self.cleart)
         self.menu.add_cascade(label = "Edit" , menu  = self.edit_menu)
         
         self.show_menu = Menu(self.menu,tearoff = 0)
@@ -69,6 +69,7 @@ class lbs_to_kg():
         
         self.master.config(menu=self.menu)
         self.master.bind('<Alt-F4>',lambda event: self.exitmenu())
+        self.master.bind('<Alt-s>',lambda event: self.cleart())
         self.master.bind('<Control-F1>',lambda event: self.helpmenu())
         self.master.bind('<Control-i>',lambda event:self.aboutmenu())
         self.master.bind('<Control-s>',lambda event:self.showconv())
