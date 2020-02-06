@@ -3,6 +3,10 @@ File menu
 Convert Ctrl + T
 Exit Alt + F4
 =======================
+Edit
+========================
+Clear text field Alt + s
+========================
 Show menu
 ========================
 Show Convertions Alt + S
