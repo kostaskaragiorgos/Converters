@@ -77,16 +77,22 @@ class lbs_to_kg():
         self.master.bind('<Control-t>',lambda event:self.conv())
     
     def cleart(self):
+
         """ clears text field """
+
         self.textname.delete(1.0,END)
 
     def showconv(self):
+
         """ shows the convertions done """
+
         df = pd.read_csv('lbs_to_kg.csv')
         msg.showinfo("LBS TO KG", str(df))
     
     def conv(self):
+
         """ convertion fuction """ 
+        
         corf = 0
         if self.varfrom.get() == " " or self.varto.get() == " " or self.varfrom.get() == self.varto.get():
             msg.showerror("ERROR","THIS CONVERTION CAN NOT BE DONE")
