@@ -92,38 +92,34 @@ class lbs_to_kg():
     def conv(self):
 
         """ convertion fuction """ 
-        
-        corf = 0
         if self.varfrom.get() == " " or self.varto.get() == " " or self.varfrom.get() == self.varto.get():
             msg.showerror("ERROR","THIS CONVERTION CAN NOT BE DONE")
         else:
             try:
-                if float(self.textname.get(1.0,END)) > 0:
-                    corf = 1
+                if float(self.textname.get(1.0,END)) > 0 and self.varfrom.get() == "LBS":
+                    value = float(self.textname.get(1.0,END))*0.45359237
+                    with open('lbs_to_kg.csv', 'a+') as f:
+                        thewriter = csv.writer(f)
+                        thewriter.writerow([str(float(self.textname.get(1.0,END))),str(value)])
+
+                    msg.showinfo("LBS TO KG", str(float(self.textname.get(1.0,END)))+" LBS ARE "+str(value)+" KG ")
+                    self.textname.delete(1.0,END)
+                elif float(self.textname.get(1.0,END)) > 0 and self.varfrom.get() == "KG":
+                    value = float(self.textname.get(1.0,END))*2.20462
+                    with open('lbs_to_kg.csv', 'a+') as f:
+                        thewriter = csv.writer(f)
+                        thewriter.writerow([str(value),str(float(self.textname.get(1.0,END)))])
+
+                    msg.showinfo("KG TO LBS",str(float(self.textname.get(1.0,END)))+" KG ARE " +str(value)+" LBS ")
+                    self.textname.delete(1.0,END)
                 else:
                     msg.showerror("Value Error", "Enter a number higher than zero")
-                    self.textname.delete(0,END)
+                    self.textname.delete(1.0,END)
             except:
                 msg.showerror("Value Error", "Enter a number higher than zero")
                 self.textname.delete(1.0,END)
-        if corf == 1:
-            if self.varfrom.get() == "LBS":
-                value = float(self.textname.get(1.0,END))*0.45359237
-                with open('lbs_to_kg.csv', 'a+') as f:
-                    thewriter = csv.writer(f)
-                    thewriter.writerow([str(float(self.textname.get(1.0,END))),str(value)])
 
-                msg.showinfo("LBS TO KG", str(float(self.textname.get(1.0,END)))+" LBS ARE "+str(value)+" KG ")
-                self.textname.delete(1.0,END)
                 
-            elif self.varfrom.get() == "KG":
-                value = float(self.textname.get(1.0,END))*2.20462
-                with open('lbs_to_kg.csv', 'a+') as f:
-                    thewriter = csv.writer(f)
-                    thewriter.writerow([str(value),str(float(self.textname.get(1.0,END)))])
-
-                msg.showinfo("KG TO LBS",str(float(self.textname.get(1.0,END)))+" KG ARE " +str(value)+" LBS ")
-                self.textname.delete(1.0,END)
                
     def exitmenu(self):
         if msg.askokcancel("Quit?", "Really quit?"):
