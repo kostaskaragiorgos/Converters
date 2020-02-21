@@ -1,7 +1,6 @@
 from tkinter import Label, Text, StringVar, Tk, OptionMenu
 from tkinter import Button, Menu, END, messagebox as msg
 import csv
-import os 
 import pandas as pd
 class ft_to_m():
     def __init__(self, master):
@@ -10,13 +9,13 @@ class ft_to_m():
         self.master.geometry("250x200")
         self.master.resizable(False, False)
 
-        self.amleb = Label(self.master, text = "Amount")
+        self.amleb = Label(self.master, text="Amount")
         self.amleb.pack()
         
-        self.textname = Text(self.master, height = 1 )
+        self.textname = Text(self.master, height=1)
         self.textname.pack()
         
-        self.fromleb = Label(self.master, text = "From")
+        self.fromleb = Label(self.master, text="From")
         self.fromleb.pack()
         
         fromlist = list([" ", "FT", "M"])
@@ -66,48 +65,42 @@ class ft_to_m():
         
     def showconv(self):
         """ shows convertions done """
-
         df = pd.read_csv('ft_to_m.csv')
         msg.showinfo("FT TO M", str(df))
     
     def conv(self):
         try:
-            if float(self.textname.get(1.0,END)) > 0 and self.varfrom.get() == "FT":
-                value = float(self.textname.get(1.0,END))*0.3048
+            if float(self.textname.get(1.0, END)) > 0 and self.varfrom.get() == "FT":
+                value = float(self.textname.get(1.0, END))*0.3048
                 with open('ft_to_m.csv', 'a+') as f:
                     thewriter = csv.writer(f)
-                    thewriter.writerow([str(value),str(float(self.textname.get(1.0,END)))])
-                msg.showinfo("M TO FT",str(float(self.textname.get(1.0,END)))+" M ARE " +str(value)+" FT ")
-                self.textname.delete(1.0,END)
-            elif float(self.textname.get(1.0,END)) > 0 and self.varfrom.get() == "M":
-                value = float(self.textname.get(1.0,END))/0.3048
+                    thewriter.writerow([str(value), str(float(self.textname.get(1.0, END)))])
+                msg.showinfo("M TO FT", str(float(self.textname.get(1.0, END)))+" M ARE " +str(value)+" FT ")
+                self.textname.delete(1.0, END)
+            elif float(self.textname.get(1.0, END)) > 0 and self.varfrom.get() == "M":
+                value = float(self.textname.get(1.0, END))/0.3048
                 with open('ft_to_m.csv', 'a+') as f:
                     thewriter = csv.writer(f)
-                    thewriter.writerow([str(value),str(float(self.textname.get(1.0,END)))])
-                msg.showinfo("M TO FT",str(float(self.textname.get(1.0,END)))+" M ARE " +str(value)+" FT ")
-                self.textname.delete(1.0,END)
+                    thewriter.writerow([str(value), str(float(self.textname.get(1.0, END)))])
+                msg.showinfo("M TO FT", str(float(self.textname.get(1.0, END)))+" M ARE " +str(value)+" FT ")
+                self.textname.delete(1.0, END)
             else:
                 msg.showerror("Value Error", "Enter a number higher than zero")
-                self.textname.delete(1.0,END)
+                self.textname.delete(1.0, END)
         except:
             msg.showerror("Value Error", "Enter a number higher than zero")
-            self.textname.delete(1.0,END)
-        
-            
+            self.textname.delete(1.0, END)
     def exitmenu(self):
         if msg.askokcancel("Quit?", "Really quit?"):
             self.master.destroy()
-    
     def helpmenu(self):
         msg.showinfo("Help", "Enter an amount choose from and to lists and press convert button")
-    
     def aboutmenu(self):
-        msg.showinfo("About","About FT TO M CONVERTER \nVersion 1.0")
-
+        msg.showinfo("About", "About FT TO M CONVERTER \nVersion 1.0")
 def main():
+    """ the main function """
     root=Tk()
     ft_to_m(root)
     root.mainloop()
-    
 if __name__=='__main__':
     main()
