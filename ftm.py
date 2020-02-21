@@ -87,7 +87,7 @@ class ft_to_m():
             else:
                 msg.showerror("Value Error", "Enter a number higher than zero")
                 self.textname.delete(1.0, END)
-        except:
+        except ValueError:
             msg.showerror("Value Error", "Enter a number higher than zero")
             self.textname.delete(1.0, END)
     def exitmenu(self):
@@ -99,8 +99,8 @@ class ft_to_m():
         msg.showinfo("About", "About FT TO M CONVERTER \nVersion 1.0")
 def main():
     """ the main function """
-    root=Tk()
+    root = Tk()
     ft_to_m(root)
     root.mainloop()
-if __name__=='__main__':
+if __name__ == '__main__':
     main()
