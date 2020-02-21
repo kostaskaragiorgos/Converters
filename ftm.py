@@ -12,7 +12,7 @@ class ft_to_m():
         self.master.geometry("250x200")
         self.master.resizable(False,False)
         
-        if os.path.exists('ft_to_m.csv') == False:
+        if not(os.path.exists('ft_to_m.csv')):
             with open('ft_to_m.csv', 'a+') as f:
                 thewriter = csv.writer(f)
                 thewriter.writerow(['FT','M'])
@@ -89,38 +89,32 @@ class ft_to_m():
     
     def conv(self):
         """ convert function"""
-        corf = 0
         if self.varfrom.get() == " " or self.varto.get() == " " or self.varfrom.get() == self.varto.get():
             msg.showerror("ERROR","THIS CONVERTION CAN NOT BE DONE")
         else:
             try:
                 if float(self.textname.get(1.0,END)) > 0:
-                    corf = 1
+                    if self.varfrom.get() == "FT":
+                        value = float(self.textname.get(1.0,END))*0.3048
+                        with open('ft_to_m.csv', 'a+') as f:
+                            thewriter = csv.writer(f)
+                            thewriter.writerow([str(float(self.textname.get(1.0,END))),str(value)])
+                        msg.showinfo("FT TO M", str(float(self.textname.get(1.0,END)))+" FT ARE "+str(value)+" M ")
+                        self.textname.delete(1.0,END)
+                    elif self.varfrom.get() == "M":
+                        value = float(self.textname.get(1.0,END))/0.3048
+                        with open('ft_to_m.csv', 'a+') as f:
+                            thewriter = csv.writer(f)
+                            thewriter.writerow([str(value),str(float(self.textname.get(1.0,END)))])
+                        msg.showinfo("M TO FT",str(float(self.textname.get(1.0,END)))+" M ARE " +str(value)+" FT ")
+                        self.textname.delete(1.0,END)
                 else:
                     msg.showerror("Value Error", "Enter a number higher than zero")
                     self.textname.delete(1.0,END)
             except:
                 msg.showerror("Value Error", "Enter a number higher than zero")
                 self.textname.delete(1.0,END)
-        if corf == 1:
-            if self.varfrom.get() == "FT":
-                value = float(self.textname.get(1.0,END))*0.3048
-                with open('ft_to_m.csv', 'a+') as f:
-                    thewriter = csv.writer(f)
-                    thewriter.writerow([str(float(self.textname.get(1.0,END))),str(value)])
-                    
-                msg.showinfo("FT TO M", str(float(self.textname.get(1.0,END)))+" FT ARE "+str(value)+" M ")
-                self.textname.delete(1.0,END)
-                
-            elif self.varfrom.get() == "M":
-                value = float(self.textname.get(1.0,END))/0.3048
-                with open('ft_to_m.csv', 'a+') as f:
-                    thewriter = csv.writer(f)
-                    thewriter.writerow([str(value),str(float(self.textname.get(1.0,END)))])
-                msg.showinfo("M TO FT",str(float(self.textname.get(1.0,END)))+" M ARE " +str(value)+" FT ")
-                self.textname.delete(1.0,END)
-               
-        
+            
     def exitmenu(self):
         if msg.askokcancel("Quit?", "Really quit?"):
             self.master.destroy()
