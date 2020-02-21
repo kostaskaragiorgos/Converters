@@ -1,8 +1,13 @@
+"""
+F to M converter
+"""
+
 from tkinter import Label, Text, StringVar, Tk, OptionMenu
 from tkinter import Button, Menu, END, messagebox as msg
 import csv
 import pandas as pd
-class ft_to_m():
+class FtToM():
+    """ Ft To M Class"""
     def __init__(self, master):
         self.master = master
         self.master.title("FT TO M CONVERTER")
@@ -24,7 +29,7 @@ class ft_to_m():
         self.popupfrommenu = OptionMenu(self.master, self.varfrom, *fromlist)
         self.popupfrommenu.pack()
         
-        self.toleb = Label(self.master, text = "To")
+        self.toleb = Label(self.master, text="To")
         self.toleb.pack()
         
         tolist = list([" ", "FT", "M"])
@@ -32,16 +37,16 @@ class ft_to_m():
         self.varto.set(fromlist[0])
         self.popuptomenu = OptionMenu(self.master, self.varto, *tolist)
         self.popuptomenu.pack()
-        self.convb = Button(self.master, text = "Convert", command=self.conv)
+        self.convb = Button(self.master, text="Convert", command=self.conv)
         self.convb.pack()
         # menu
         self.menu = Menu(self.master)
         self.file_menu = Menu(self.menu, tearoff=0)
-        self.file_menu.add_command(label = "Convert", accelerator = 'Ctrl+T', command=self.conv)
-        self.file_menu.add_command(label="Exit", accelerator= 'Alt+F4', command=self.exitmenu)
-        self.menu.add_cascade(label = "File", menu=self.file_menu)
-        self.edit_menu = Menu ( self.menu, tearoff=0)
-        self.edit_menu.add_command(label = "Clear text field", accelerator = 'Alt+S', command=self.cleart)
+        self.file_menu.add_command(label="Convert", accelerator='Ctrl+T', command=self.conv)
+        self.file_menu.add_command(label="Exit", accelerator='Alt+F4', command=self.exitmenu)
+        self.menu.add_cascade(label="File", menu=self.file_menu)
+        self.edit_menu = Menu(self.menu, tearoff=0)
+        self.edit_menu.add_command(label="Clear text field", accelerator='Alt+S', command=self.cleart)
         self.menu.add_cascade(label="Edit", menu=self.edit_menu)
         self.show_menu = Menu(self.menu, tearoff=0)
         self.show_menu.add_command(label="Show Convertions", accelerator='Ctrl+S', command=self.showconv)
@@ -69,6 +74,7 @@ class ft_to_m():
         msg.showinfo("FT TO M", str(df))
     
     def conv(self):
+        """ convert button function """
         try:
             if float(self.textname.get(1.0, END)) > 0 and self.varfrom.get() == "FT":
                 value = float(self.textname.get(1.0, END))*0.3048
@@ -91,16 +97,19 @@ class ft_to_m():
             msg.showerror("Value Error", "Enter a number higher than zero")
             self.textname.delete(1.0, END)
     def exitmenu(self):
+        """ exit menu function """
         if msg.askokcancel("Quit?", "Really quit?"):
             self.master.destroy()
     def helpmenu(self):
+        """ help menu function """
         msg.showinfo("Help", "Enter an amount choose from and to lists and press convert button")
     def aboutmenu(self):
+        """ about menu function """
         msg.showinfo("About", "About FT TO M CONVERTER \nVersion 1.0")
 def main():
     """ the main function """
     root = Tk()
-    ft_to_m(root)
+    FtToM(root)
     root.mainloop()
 if __name__ == '__main__':
     main()
