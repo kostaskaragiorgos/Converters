@@ -22,25 +22,19 @@ class FtToM():
         self.master.title("FT TO M CONVERTER")
         self.master.geometry("250x200")
         self.master.resizable(False, False)
-
         self.amleb = Label(self.master, text="Amount")
         self.amleb.pack()
-        
         self.textname = Text(self.master, height=1)
         self.textname.pack()
-        
         self.fromleb = Label(self.master, text="From")
         self.fromleb.pack()
-        
         fromlist = list([" ", "FT", "M"])
         self.varfrom = StringVar(master)
         self.varfrom.set(fromlist[0])
         self.popupfrommenu = OptionMenu(self.master, self.varfrom, *fromlist)
         self.popupfrommenu.pack()
-        
         self.toleb = Label(self.master, text="To")
         self.toleb.pack()
-        
         tolist = list([" ", "FT", "M"])
         self.varto = StringVar(master)
         self.varto.set(fromlist[0])
