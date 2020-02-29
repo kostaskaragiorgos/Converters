@@ -87,9 +87,11 @@ class FtToM():
                     thewriter.writerow([str(value), str(float(self.textname.get(1.0, END)))])
                 msg.showinfo("M TO FT", str(float(self.textname.get(1.0, END)))+" M ARE " +str(value)+" FT ")
                 self.textname.delete(1.0, END)
+                """
             else:
                 msg.showerror("Value Error", "Enter a number higher than zero")
                 self.textname.delete(1.0, END)
+                """
         except ValueError:
             msg.showerror("Value Error", "Enter a number higher than zero")
             self.textname.delete(1.0, END)
