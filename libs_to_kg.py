@@ -9,6 +9,7 @@ import pandas as pd
 def showconv():
     """ shows the convertions done """
     df = pd.read_csv('lbs_to_kg.csv')
+    df = df.drop_duplicates(keep="first")
     msg.showinfo("LBS TO KG", str(df))
 def helpmenu():
     """ help menu function """
