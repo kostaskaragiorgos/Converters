@@ -1,5 +1,25 @@
 # Converters
 
+
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
+
+# Table of contents
+<!--ts-->
+  * [Converters](#Converters)
+  * [Table of contents](#Table_of_contents)
+  * [Files](#Files)
+  * [LBS_TO_KG_CONVERTER](#LBS_TO_KG_CONVERTER)
+    * [Dependencies](#Dependencies)
+    * [Current_Version](#Current_Version)
+    * [Keybinds](#Keybinds)
+  * [FT_TO_M_CONVERTER](#FT_TO_M_CONVERTER)
+    * [Dependencies](#Dependencies)
+    * [Current_Version](#Current_Version)
+    * [Keybinds](#Keybinds)
+  * [License](#License)
+<!--te-->
+
+
 ## FILES
 <ul>
   <li> FT TO M KEYBINDS (keybinds file) </li>
@@ -10,7 +30,7 @@
   <li> libs to kg.py(main libs to kg file) </li>
  </ul>
 
-## LBS TO KG CONVERTER
+## LBS_TO_KG_CONVERTER
 
 You need to convert lbs to kg or vice versa
 
@@ -23,7 +43,7 @@ You need to convert lbs to kg or vice versa
   <li> second way to install pandas( pip install pandas) </li>
 </ul>
 
-**Current Version**
+## Current_Version
 
 <p><img src ="lbs to kg converter.png" title = "lbs to kg converter Version"/> </p>
 
@@ -37,7 +57,7 @@ You need to convert lbs to kg or vice versa
   <li> Help(Ctrl+F1) </li>
 </ul>
 
-## FT TO M CONVERTER
+## FT_TO_M_CONVERTER
 
  You need to convert ft to m or vice versa
  
@@ -50,7 +70,7 @@ You need to convert lbs to kg or vice versa
   <li> second way to install pandas( pip install pandas) </li>
 </ul>
  
- **Current Version**
+## Current_Version
  
  <p><img src ="ft to m.png" title = "ft to m converter Version"/> </p>
 
@@ -65,3 +85,5 @@ You need to convert lbs to kg or vice versa
 </ul>
 
  
+## License
+[GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
