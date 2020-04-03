@@ -45,7 +45,7 @@ You need to convert lbs to kg or vice versa
 
 ## Current_Version
 
-<p><img src ="lbs to kg converter.png" title = "lbs to kg converter Version"/> </p>
+<p><img src ="images/lbs to kg converter.png" title = "lbs to kg converter Version"/> </p>
 
 ## Keybinds 
 <ul>
@@ -72,7 +72,7 @@ You need to convert lbs to kg or vice versa
  
 ## Current_Version
  
- <p><img src ="ft to m.png" title = "ft to m converter Version"/> </p>
+ <p><img src ="images/ft to m.png" title = "ft to m converter Version"/> </p>
 
 ## Keybinds 
 <ul>
