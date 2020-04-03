@@ -26,6 +26,10 @@ class FtToM():
         self.master.title("FT TO M CONVERTER")
         self.master.geometry("250x200")
         self.master.resizable(False, False)
+        if os.path.exists('ft_to_m.csv') == False:
+            with open('ft_to_m.csv', 'a+') as f:
+                thewriter = csv.writer(f)
+                thewriter.writerow(['FT', 'M'])
         self.amleb = Label(self.master, text="Amount")
         self.amleb.pack()
         self.textname = Text(self.master, height=1)
