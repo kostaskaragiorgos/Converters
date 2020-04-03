@@ -3,12 +3,16 @@ F to M converter
 """
 from tkinter import Label, Text, StringVar, Tk, OptionMenu
 from tkinter import Button, Menu, END, messagebox as msg
+import os
 import csv
 import pandas as pd
 def showconv():
     """ shows convertions done """
-    df = pd.read_csv('ft_to_m.csv')
-    msg.showinfo("FT TO M", str(df))
+    if not os.path.exists('ft_to_m.csv'):
+        msg.showerror("ERROR","NO FILE TO SHOW")
+    else:
+        df = pd.read_csv('ft_to_m.csv')
+        msg.showinfo("FT TO M", str(df))
 def helpmenu():
     """ help menu function """
     msg.showinfo("Help", "Enter an amount choose from and to lists and press convert button")
