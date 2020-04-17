@@ -12,7 +12,10 @@ def showconv():
         msg.showerror("ERROR", "NO FILE TO SHOW")
     else:
         df = pd.read_csv('ft_to_m.csv')
-        msg.showinfo("FT TO M", str(df))
+        if df.empty:
+            msg.showerror("ERROR", "NO CONVERTIONS SAVED")
+        else:
+            msg.showinfo("FT TO M", str(df))
 def helpmenu():
     """ help menu function """
     msg.showinfo("Help", "Enter an amount choose from and to lists and press convert button")
