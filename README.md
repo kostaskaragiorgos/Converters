@@ -7,7 +7,7 @@
 <!--ts-->
   * [Converters](#Converters)
   * [Table of contents](#Table_of_contents)
-  * [Files](#Files)
+  * [Files/Folders](#Files/Folders)
   * [LBS_TO_KG_CONVERTER](#LBS_TO_KG_CONVERTER)
     * [Dependencies](#Dependencies)
     * [Current_Version](#Current_Version)
@@ -22,8 +22,10 @@
 <!--te-->
 
 
-## FILES
+## Files/Folders
 <ul>
+  <li> images (images folder) </li>
+  <li> doc (documentation folder)
   <li> FT TO M KEYBINDS (keybinds file) </li>
   <li> ft_to_m.csv( saved converts) </li>
   <li> ftm keybinds(keybinds file) </li>
