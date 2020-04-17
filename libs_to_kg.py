@@ -9,7 +9,7 @@ import pandas as pd
 def showconv():
     """ shows the convertions done """
     df = pd.read_csv('lbs_to_kg.csv')
-    df = df.drop_duplicates(keep="first")
+    df.drop_duplicates(keep="first", inplace=True)
     msg.showinfo("LBS TO KG", str(df))
 def helpmenu():
     """ help menu function """
@@ -24,7 +24,7 @@ class lbs_to_kg():
         self.master.title("LBS TO KG CONVERTER")
         self.master.geometry("250x200")
         self.master.resizable(False, False)
-        if os.path.exists('lbs_to_kg.csv') == False:
+        if not os.path.exists('lbs_to_kg.csv'):
             with open('lbs_to_kg.csv', 'a+') as f:
                 thewriter = csv.writer(f)
                 thewriter.writerow(['LBS', 'KG'])

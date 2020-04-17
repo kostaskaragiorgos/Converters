@@ -9,7 +9,7 @@ import pandas as pd
 def showconv():
     """ shows convertions done """
     if not os.path.exists('ft_to_m.csv'):
-        msg.showerror("ERROR","NO FILE TO SHOW")
+        msg.showerror("ERROR", "NO FILE TO SHOW")
     else:
         df = pd.read_csv('ft_to_m.csv')
         msg.showinfo("FT TO M", str(df))
@@ -26,7 +26,7 @@ class FtToM():
         self.master.title("FT TO M CONVERTER")
         self.master.geometry("250x200")
         self.master.resizable(False, False)
-        if os.path.exists('ft_to_m.csv') == False:
+        if not os.path.exists('ft_to_m.csv'):
             with open('ft_to_m.csv', 'a+') as f:
                 thewriter = csv.writer(f)
                 thewriter.writerow(['FT', 'M'])
