@@ -15,6 +15,7 @@ def showconv():
         if df.empty:
             msg.showerror("ERROR", "NO CONVERTIONS SAVED")
         else:
+            df.drop_duplicates(keep="first", inplace=True)
             msg.showinfo("FT TO M", str(df))
 def helpmenu():
     """ help menu function """
