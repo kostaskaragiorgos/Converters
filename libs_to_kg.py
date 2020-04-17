@@ -54,7 +54,7 @@ class lbs_to_kg():
         self.file_menu.add_command(label="Convert", accelerator='Ctrl+T', command=self.conv)
         self.file_menu.add_command(label="Exit", accelerator='Alt+F4', command=self.exitmenu)
         self.menu.add_cascade(label="File", menu=self.file_menu)
-        self.edit_menu = Menu ( self.menu, tearoff=0)
+        self.edit_menu = Menu (self.menu, tearoff=0)
         self.edit_menu.add_command(label="Clear text field", accelerator='Alt + S', command=self.cleart)
         self.menu.add_cascade(label="Edit", menu=self.edit_menu)
         self.show_menu = Menu(self.menu, tearoff=0)
@@ -86,7 +86,7 @@ class lbs_to_kg():
                     value = float(self.textname.get(1.0, END))*0.45359237
                     with open('lbs_to_kg.csv', 'a+') as f:
                         thewriter = csv.writer(f)
-                        thewriter.writerow([str(float(self.textname.get(1.0, END))),str(value)])
+                        thewriter.writerow([str(float(self.textname.get(1.0, END))), str(value)])
                     msg.showinfo("LBS TO KG", str(float(self.textname.get(1.0, END)))+" LBS ARE "+str(value)+" KG ")
                     self.textname.delete(1.0, END)
                 elif float(self.textname.get(1.0, END)) > 0 and self.varfrom.get() == "KG":
