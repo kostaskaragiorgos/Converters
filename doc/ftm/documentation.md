@@ -20,6 +20,10 @@ You press ok to close the app or cancel if you don't want
 
 ## Clear text filed
 
+You can clear the text field using menu Edit --> Clear text field or using Alt+s keubind
+
+<p><img src ="doc images/edit/clear text field.png" title="clear text "/></p>
+
 # SHOW MENU
 
 ## Show convertions
