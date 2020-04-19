@@ -32,3 +32,6 @@ You can show done convertions using menu Show --> Show Convertions or using Ctrl
 
 <p><img src="doc images/show/show convertions.png"title ="show convertions menu"/>
 
+an informative message pops up
+
+<p><img src="doc images/show/show convertions pop up.png" title="Show convertions"/></p>
