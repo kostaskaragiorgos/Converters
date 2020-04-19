@@ -8,9 +8,15 @@ import os
 import pandas as pd
 def showconv():
     """ shows the convertions done """
-    df = pd.read_csv('lbs_to_kg.csv')
-    df.drop_duplicates(keep="first", inplace=True)
-    msg.showinfo("LBS TO KG", str(df))
+    if not os.path.exists('lbs_to_kg.csv'):
+        msg.showerror("ERROR", "NO FILE TO SHOW")
+    else:
+        df = pd.read_csv('lbs_to_kg.csv')
+        if df.empty:
+            msg.showerror("ERROR", "NO CONVERTIONS SAVED")
+        else:
+            df.drop_duplicates(keep="first", inplace=True)
+            msg.showinfo("LBS TO KG", str(df))
 def helpmenu():
     """ help menu function """
     msg.showinfo("Help", "Enter an amount and choose from the from and to lists and press the convert button")
