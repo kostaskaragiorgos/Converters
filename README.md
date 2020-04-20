@@ -9,15 +9,17 @@
   * [Table of contents](#Table_of_contents)
   * [Files/Folders](#Files/Folders)
   * [LBS_TO_KG_CONVERTER](#LBS_TO_KG_CONVERTER)
-    * [Dependencies](#Dependencies)
-    * [Current_Version](#Current_Version)
-    * [Radon](#Radon)
-    * [Keybinds](#Keybinds)
+    * [Dependencies](#Dependencies_libs_to_kg)
+    * [Current_Version](#Current_Version_libs_to_kg)
+    * [Documentation](#Documentation_libs_to_kg)
+    * [Radon](#Radon_libs_to_kg)
+    * [Keybinds](#Keybinds_libs_to_kg)
   * [FT_TO_M_CONVERTER](#FT_TO_M_CONVERTER)
-    * [Dependencies](#Dependencies)
-    * [Current_Version](#Current_Version)
-    * [Radon](#Radon)
-    * [Keybinds](#Keybinds)
+    * [Dependencies](#Dependencies_ftm)
+    * [Current_Version](#Current_Version_ftm)
+    * [Documnetation](#Documentation_ftm)
+    * [Radon](#Radon_ftm)
+    * [Keybinds](#Keybinds_ftm)
   * [License](#License)
 <!--te-->
 
@@ -25,7 +27,7 @@
 ## Files/Folders
 <ul>
   <li> images (images folder) </li>
-  <li> doc (documentation folder)
+  <li> doc (documentation folder) </li>
   <li> FT TO M KEYBINDS (keybinds file) </li>
   <li> ft_to_m.csv( saved converts) </li>
   <li> ftm keybinds(keybinds file) </li>
@@ -38,7 +40,7 @@
 
 You need to convert lbs to kg or vice versa
 
-## Dependencies
+## Dependencies_libs_to_kg
 
 <ul>
   <li> csv (conda install -c anaconda csvkit) </li>
@@ -47,18 +49,22 @@ You need to convert lbs to kg or vice versa
   <li> second way to install pandas( pip install pandas) </li>
 </ul>
 
-## Current_Version
+## Current_Version_libs_to_kg
 
 <p><img src ="images/lbs to kg converter.png" title = "lbs to kg converter Version"/> </p>
 
-## Radon
+## Documentation_libs_to_kg
+
+All project documentation is located in the `./doc/lbs to kg`  folder.
+
+## Radon_libs_to_kg
 
 <p><img src ="images/libs_to_kg radon cc.png" title="libs to kg radon cc"/></p>
 <p><img src ="images/libs_to_kg radon hal.png" title="libs to kg radon hal"/></p>
 <p><img src ="images/libs_to_kg radon mi.png" title="libs to kg radon mi"/></p>
 <p><img src ="images/libs_to_kg radon raw.png" title="libs to kg radon raw"/></p>
 
-## Keybinds 
+## Keybinds_libs_to_kg
 <ul>
   <li> Convert(Ctrl+T) </li>
   <li> Exit(Alt+F4) </li>
@@ -72,7 +78,7 @@ You need to convert lbs to kg or vice versa
 
  You need to convert ft to m or vice versa
  
- ## Dependencies
+ ## Dependencies_ftm
 
  <ul>
   <li> csv (conda install -c anaconda csvkit) </li>
@@ -81,18 +87,22 @@ You need to convert lbs to kg or vice versa
   <li> second way to install pandas( pip install pandas) </li>
 </ul>
  
-## Current_Version
+## Current_Version_ftm
  
  <p><img src ="images/ft to m.png" title = "ft to m converter Version"/> </p>
 
- ## Radon
+ ## Documentation_ftm
+
+All project documentation is located in the `./doc/ftm`  folder.
+
+ ## Radon_ftm
 
 <p><img src ="images/ftm radon cc.png" title="f to m radon cc"/></p>
 <p><img src ="images/ftm radon hal.png" title="f to m radon hal"/></p>
 <p><img src ="images/ftm radon mi.png" title="f to m radon mi"/></p>
 <p><img src ="images/ftm radon raw.png" title="f to m radon raw"/></p>
 
-## Keybinds 
+## Keybinds_ftm
 <ul>
   <li> Convert(Ctrl+T) </li>
   <li> Exit(Alt+F4) </li>
