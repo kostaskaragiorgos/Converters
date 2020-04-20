@@ -13,12 +13,20 @@
     * [Current_Version](#Current_Version_libs_to_kg)
     * [Documentation](#Documentation_libs_to_kg)
     * [Radon](#Radon_libs_to_kg)
+      * [Radon cc](#Radon_cc_libs_to_kg)
+      * [Radon hal](#Radon_hal_libs_to_kg)
+      * [Radon mi](#Radon_mi_libs_to_kg)
+      * [Radon raw](#Radon_raw_libs_to_kg)
     * [Keybinds](#Keybinds_libs_to_kg)
   * [FT_TO_M_CONVERTER](#FT_TO_M_CONVERTER)
     * [Dependencies](#Dependencies_ftm)
     * [Current_Version](#Current_Version_ftm)
     * [Documnetation](#Documentation_ftm)
     * [Radon](#Radon_ftm)
+      * [Radon cc](#Radon_cc_ftm)
+      * [Radon hal](#Radon_hal_ftm)
+      * [Radon mi](#Radon_mi_ftm)
+      * [Radon raw](#Radon_raw_ftm)
     * [Keybinds](#Keybinds_ftm)
   * [License](#License)
 <!--te-->
@@ -29,7 +37,6 @@
   <li> images (images folder) </li>
   <li> doc (documentation folder) </li>
   <li> FT TO M KEYBINDS (keybinds file) </li>
-  <li> ft_to_m.csv( saved converts) </li>
   <li> ftm keybinds(keybinds file) </li>
   <li> ftm.py(main ftm file) </li>
   <li> libs to kg keybinds(keybinds file) </li>
@@ -59,9 +66,20 @@ All project documentation is located in the `./doc/lbs to kg`  folder.
 
 ## Radon_libs_to_kg
 
+### Radon_cc_libs_to_kg
+
 <p><img src ="images/libs_to_kg radon cc.png" title="libs to kg radon cc"/></p>
+
+### Radon_hal_libs_to_kg
+
 <p><img src ="images/libs_to_kg radon hal.png" title="libs to kg radon hal"/></p>
+
+### Radon_mi_libs_to_kg
+
 <p><img src ="images/libs_to_kg radon mi.png" title="libs to kg radon mi"/></p>
+
+### Radon_raw_libs_to_kg
+
 <p><img src ="images/libs_to_kg radon raw.png" title="libs to kg radon raw"/></p>
 
 ## Keybinds_libs_to_kg
@@ -97,9 +115,20 @@ All project documentation is located in the `./doc/ftm`  folder.
 
  ## Radon_ftm
 
+### Radon_cc_ftm
+
 <p><img src ="images/ftm radon cc.png" title="f to m radon cc"/></p>
+
+### Radon_hal_ftm
+
 <p><img src ="images/ftm radon hal.png" title="f to m radon hal"/></p>
+
+### Radon_mi_ftm
+
 <p><img src ="images/ftm radon mi.png" title="f to m radon mi"/></p>
+
+### Radon_raw_ftm
+
 <p><img src ="images/ftm radon raw.png" title="f to m radon raw"/></p>
 
 ## Keybinds_ftm
