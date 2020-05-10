@@ -82,6 +82,10 @@ class lbs_to_kg():
     def cleart(self):
         """ clears text field """
         self.textname.delete(1.0, END)
+    def save_convertion(self,value):
+        with open('lbs_to_kg.csv', 'a+') as f:
+            thewriter = csv.writer(f)
+            thewriter.writerow([str(float(self.textname.get(1.0, END))), str(value)])
     def conv(self):
         """ convertion fuction """ 
         if self.varfrom.get() == " " or self.varto.get() == " " or self.varfrom.get() == self.varto.get():
@@ -90,16 +94,12 @@ class lbs_to_kg():
             try:
                 if float(self.textname.get(1.0, END)) > 0 and self.varfrom.get() == "LBS":
                     value = float(self.textname.get(1.0, END))*0.45359237
-                    with open('lbs_to_kg.csv', 'a+') as f:
-                        thewriter = csv.writer(f)
-                        thewriter.writerow([str(float(self.textname.get(1.0, END))), str(value)])
+                    self.save_convertion(value)
                     msg.showinfo("LBS TO KG", str(float(self.textname.get(1.0, END)))+" LBS ARE "+str(value)+" KG ")
                     self.textname.delete(1.0, END)
                 elif float(self.textname.get(1.0, END)) > 0 and self.varfrom.get() == "KG":
                     value = float(self.textname.get(1.0, END))*2.20462
-                    with open('lbs_to_kg.csv', 'a+') as f:
-                        thewriter = csv.writer(f)
-                        thewriter.writerow([str(value), str(float(self.textname.get(1.0, END)))])
+                    self.save_convertion(value)
                     msg.showinfo("KG TO LBS", str(float(self.textname.get(1.0, END)))+" KG ARE " +str(value)+" LBS ")
                     self.textname.delete(1.0, END)
                 else:

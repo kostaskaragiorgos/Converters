@@ -82,31 +82,32 @@ class FtToM():
     def cleart(self):
         """ clears the text field"""
         self.textname.delete(1.0, END)
+    def saveconvertion(self, value):
+        with open('ft_to_m.csv', 'a+') as f:
+            thewriter = csv.writer(f)
+            thewriter.writerow([str(float(self.textname.get(1.0, END))), str(value)])
     def conv(self):
         """ convert button function """
-        try:
-            if float(self.textname.get(1.0, END)) > 0 and self.varfrom.get() == "FT":
-                value = float(self.textname.get(1.0, END))*0.3048
-                with open('ft_to_m.csv', 'a+') as f:
-                    thewriter = csv.writer(f)
-                    thewriter.writerow([str(value), str(float(self.textname.get(1.0, END)))])
-                msg.showinfo("M TO FT", str(float(self.textname.get(1.0, END)))+" M ARE " +str(value)+" FT ")
-                self.textname.delete(1.0, END)
-            elif float(self.textname.get(1.0, END)) > 0 and self.varfrom.get() == "M":
-                value = float(self.textname.get(1.0, END))/0.3048
-                with open('ft_to_m.csv', 'a+') as f:
-                    thewriter = csv.writer(f)
-                    thewriter.writerow([str(value), str(float(self.textname.get(1.0, END)))])
-                msg.showinfo("M TO FT", str(float(self.textname.get(1.0, END)))+" M ARE " +str(value)+" FT ")
-                self.textname.delete(1.0, END)
-                """
-            else:
+        if self.varfrom.get() == " " or self.varto.get() == " " or self.varfrom.get() == self.varto.get():
+            msg.showerror("ERROR", "THIS CONVERTION CAN NOT BE DONE")
+        else:
+            try:
+                if float(self.textname.get(1.0, END)) > 0 and self.varfrom.get() == "FT":
+                    value = float(self.textname.get(1.0, END))*0.3048
+                    self.saveconvertion(value)
+                    msg.showinfo("FT TO M", str(float(self.textname.get(1.0, END)))+" FT ARE "+str(value)+" M ")
+                    self.textname.delete(1.0, END)
+                elif float(self.textname.get(1.0, END)) > 0 and self.varfrom.get() == "M":
+                    value = float(self.textname.get(1.0, END))/0.3048
+                    self.saveconvertion(value)
+                    msg.showinfo("M TO FT", str(float(self.textname.get(1.0, END)))+" M ARE " +str(value)+" FT ")
+                    self.textname.delete(1.0, END)
+                else:
+                    msg.showerror("Value Error", "Enter a number higher than zero")
+                    self.textname.delete(1.0, END)
+            except:
                 msg.showerror("Value Error", "Enter a number higher than zero")
                 self.textname.delete(1.0, END)
-                """
-        except ValueError:
-            msg.showerror("Value Error", "Enter a number higher than zero")
-            self.textname.delete(1.0, END)
     def exitmenu(self):
         """ exit menu function """
         if msg.askokcancel("Quit?", "Really quit?"):
