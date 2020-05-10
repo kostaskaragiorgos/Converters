@@ -58,7 +58,7 @@ You need to convert lbs to kg or vice versa
 
 ## Current_Version_libs_to_kg
 
-<p><img src ="images/lbs to kg converter.png" title = "lbs to kg converter Version"/> </p>
+<p><img src ="images/lbstokg/lbs to kg converter.png" title = "lbs to kg converter Version"/> </p>
 
 ## Documentation_libs_to_kg
 
@@ -68,19 +68,19 @@ All project documentation is located in the `./doc/lbs to kg`  folder.
 
 ### Radon_cc_libs_to_kg
 
-<p><img src ="images/libs_to_kg radon cc.png" title="libs to kg radon cc"/></p>
+<p><img src ="images/lbstokg/radon/libs_to_kg radon cc.png" title="libs to kg radon cc"/></p>
 
 ### Radon_hal_libs_to_kg
 
-<p><img src ="images/libs_to_kg radon hal.png" title="libs to kg radon hal"/></p>
+<p><img src ="images/lbstokg/radon/libs_to_kg radon hal.png" title="libs to kg radon hal"/></p>
 
 ### Radon_mi_libs_to_kg
 
-<p><img src ="images/libs_to_kg radon mi.png" title="libs to kg radon mi"/></p>
+<p><img src ="images/lbstokg/radon/libs_to_kg radon mi.png" title="libs to kg radon mi"/></p>
 
 ### Radon_raw_libs_to_kg
 
-<p><img src ="images/libs_to_kg radon raw.png" title="libs to kg radon raw"/></p>
+<p><img src ="images/lbstokg/radon/libs_to_kg radon raw.png" title="libs to kg radon raw"/></p>
 
 ## Keybinds_libs_to_kg
 <ul>
@@ -107,7 +107,7 @@ All project documentation is located in the `./doc/lbs to kg`  folder.
  
 ## Current_Version_ftm
  
- <p><img src ="images/ft to m.png" title = "ft to m converter Version"/> </p>
+ <p><img src ="images/fttom/ft to m.png" title = "ft to m converter Version"/> </p>
 
  ## Documentation_ftm
 
@@ -117,19 +117,19 @@ All project documentation is located in the `./doc/ftm`  folder.
 
 ### Radon_cc_ftm
 
-<p><img src ="images/ftm radon cc.png" title="f to m radon cc"/></p>
+<p><img src ="images/fttom/radon/ftm radon cc.png" title="f to m radon cc"/></p>
 
 ### Radon_hal_ftm
 
-<p><img src ="images/ftm radon hal.png" title="f to m radon hal"/></p>
+<p><img src ="images/fttom/radon/ftm radon hal.png" title="f to m radon hal"/></p>
 
 ### Radon_mi_ftm
 
-<p><img src ="images/ftm radon mi.png" title="f to m radon mi"/></p>
+<p><img src ="images/fttom/radon/ftm radon mi.png" title="f to m radon mi"/></p>
 
 ### Radon_raw_ftm
 
-<p><img src ="images/ftm radon raw.png" title="f to m radon raw"/></p>
+<p><img src ="images/fttom/radon/ftm radon raw.png" title="f to m radon raw"/></p>
 
 ## Keybinds_ftm
 <ul>
