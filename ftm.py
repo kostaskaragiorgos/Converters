@@ -92,17 +92,16 @@ class FtToM():
         msg.showinfo("FT TO M", str(float(self.textname.get(1.0, END)))+" FT ARE "+str(value)+" M ")
     def conv(self):
         """ convert button function """
-        if  self.varfrom.get() == " ":
-            msg.showerror("ERROR", "THIS CONVERTION CAN NOT BE DONE")
-        else:
-            try:
-                if float(self.textname.get(1.0, END)) > 0:
-                    if self.varfrom.get() == "FT":
-                        self.ftmconvertion()
-                    elif  self.varfrom.get() == "M":
-                        self.mtoftconvertion()
-            except ValueError:
-                msg.showerror("Value Error", "Enter a number higher than zero")
+        try:
+            if float(self.textname.get(1.0, END)) > 0:
+                if self.varfrom.get() == "FT":
+                    self.ftmconvertion()
+                elif  self.varfrom.get() == "M":
+                    self.mtoftconvertion()
+                else:
+                    msg.showerror("ERROR", "THIS CONVERTION CAN NOT BE DONE")
+        except ValueError:
+            msg.showerror("Value Error", "Enter a number higher than zero")
         self.cleart()
     def exitmenu(self):
         """ exit menu function """
