@@ -96,18 +96,17 @@ class lbs_to_kg():
                     value = float(self.textname.get(1.0, END))*0.45359237
                     self.save_convertion(value)
                     msg.showinfo("LBS TO KG", str(float(self.textname.get(1.0, END)))+" LBS ARE "+str(value)+" KG ")
-                    self.textname.delete(1.0, END)
                 elif float(self.textname.get(1.0, END)) > 0 and self.varfrom.get() == "KG":
                     value = float(self.textname.get(1.0, END))*2.20462
                     self.save_convertion(value)
                     msg.showinfo("KG TO LBS", str(float(self.textname.get(1.0, END)))+" KG ARE " +str(value)+" LBS ")
-                    self.textname.delete(1.0, END)
                 else:
                     msg.showerror("Value Error", "Enter a number higher than zero")
                     self.textname.delete(1.0, END)
             except:
                 msg.showerror("Value Error", "Enter a number higher than zero")
                 self.textname.delete(1.0, END)
+        self.textname.delete(1.0, END)
     def exitmenu(self):
         """ exit menu function """
         if msg.askokcancel("Quit?", "Really quit?"):
