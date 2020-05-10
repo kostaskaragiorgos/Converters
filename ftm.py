@@ -31,7 +31,7 @@ class FtToM():
     def __init__(self, master):
         self.master = master
         self.master.title("FT TO M CONVERTER")
-        self.master.geometry("250x200")
+        self.master.geometry("250x150")
         self.master.resizable(False, False)
         if not os.path.exists('ft_to_m.csv'):
             with open('ft_to_m.csv', 'a+') as f:
@@ -48,13 +48,6 @@ class FtToM():
         self.varfrom.set(fromlist[0])
         self.popupfrommenu = OptionMenu(self.master, self.varfrom, *fromlist)
         self.popupfrommenu.pack()
-        self.toleb = Label(self.master, text="To")
-        self.toleb.pack()
-        tolist = list([" ", "FT", "M"])
-        self.varto = StringVar(master)
-        self.varto.set(fromlist[0])
-        self.popuptomenu = OptionMenu(self.master, self.varto, *tolist)
-        self.popuptomenu.pack()
         self.convb = Button(self.master, text="Convert", command=self.conv)
         self.convb.pack()
         # menu
@@ -99,7 +92,7 @@ class FtToM():
         msg.showinfo("FT TO M", str(float(self.textname.get(1.0, END)))+" FT ARE "+str(value)+" M ")
     def conv(self):
         """ convert button function """
-        if  self.varfrom.get() == self.varto.get():
+        if  self.varfrom.get() == " ":
             msg.showerror("ERROR", "THIS CONVERTION CAN NOT BE DONE")
         else:
             try:
