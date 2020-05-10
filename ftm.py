@@ -96,7 +96,6 @@ class FtToM():
                     value = float(self.textname.get(1.0, END))*0.3048
                     self.saveconvertion(value)
                     msg.showinfo("FT TO M", str(float(self.textname.get(1.0, END)))+" FT ARE "+str(value)+" M ")
-                    self.textname.delete(1.0, END)
                 elif float(self.textname.get(1.0, END)) > 0 and self.varfrom.get() == "M":
                     value = float(self.textname.get(1.0, END))/0.3048
                     self.saveconvertion(value)
@@ -108,6 +107,7 @@ class FtToM():
             except:
                 msg.showerror("Value Error", "Enter a number higher than zero")
                 self.textname.delete(1.0, END)
+        self.textname.delete(1.0, END)
     def exitmenu(self):
         """ exit menu function """
         if msg.askokcancel("Quit?", "Really quit?"):
