@@ -6,17 +6,20 @@ from tkinter import Button, Menu, END, messagebox as msg
 import os
 import csv
 import pandas as pd
+def fixdf(df):
+    """ checks if df is empty else drops duplicates"""
+    if df.empty:
+        msg.showerror("ERROR", "NO CONVERTIONS SAVED")
+    else:
+        df.drop_duplicates(keep="first", inplace=True)
 def showconv():
     """ shows convertions done """
     if not os.path.exists('ft_to_m.csv'):
         msg.showerror("ERROR", "NO FILE TO SHOW")
     else:
         df = pd.read_csv('ft_to_m.csv')
-        if df.empty:
-            msg.showerror("ERROR", "NO CONVERTIONS SAVED")
-        else:
-            df.drop_duplicates(keep="first", inplace=True)
-            msg.showinfo("FT TO M", str(df))
+        fixdf(df)
+        msg.showinfo("FT TO M", str(df))
 def helpmenu():
     """ help menu function """
     msg.showinfo("Help", "Enter an amount choose from and to lists and press convert button")
