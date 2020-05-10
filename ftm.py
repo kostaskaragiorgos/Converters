@@ -110,7 +110,6 @@ class FtToM():
                         self.mtoftconvertion()
             except ValueError:
                 msg.showerror("Value Error", "Enter a number higher than zero")
-                self.cleart()
         self.cleart()
     def exitmenu(self):
         """ exit menu function """
