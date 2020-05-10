@@ -100,10 +100,7 @@ class FtToM():
                     value = float(self.textname.get(1.0, END))/0.3048
                     self.saveconvertion(value)
                     msg.showinfo("M TO FT", str(float(self.textname.get(1.0, END)))+" M ARE " +str(value)+" FT ")
-                else:
-                    msg.showerror("Value Error", "Enter a number higher than zero")
-                    self.cleart()
-            except:
+            except ValueError:
                 msg.showerror("Value Error", "Enter a number higher than zero")
                 self.cleart()
         self.cleart()
