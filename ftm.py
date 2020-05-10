@@ -89,6 +89,14 @@ class FtToM():
         with open('ft_to_m.csv', 'a+') as f:
             thewriter = csv.writer(f)
             thewriter.writerow([str(float(self.textname.get(1.0, END))), str(value)])
+    def mtoftconvertion(self):
+        value = float(self.textname.get(1.0, END))/0.3048
+        self.saveconvertion(value)
+        msg.showinfo("M TO FT", str(float(self.textname.get(1.0, END)))+" M ARE " +str(value)+" FT ")
+    def ftmconvertion(self):
+        value = float(self.textname.get(1.0, END))*0.3048
+        self.saveconvertion(value)
+        msg.showinfo("FT TO M", str(float(self.textname.get(1.0, END)))+" FT ARE "+str(value)+" M ")
     def conv(self):
         """ convert button function """
         if self.varfrom.get() == " " or self.varto.get() == " " or self.varfrom.get() == self.varto.get():
@@ -97,13 +105,9 @@ class FtToM():
             try:
                 if float(self.textname.get(1.0, END)) > 0:
                     if self.varfrom.get() == "FT":
-                        value = float(self.textname.get(1.0, END))*0.3048
-                        self.saveconvertion(value)
-                        msg.showinfo("FT TO M", str(float(self.textname.get(1.0, END)))+" FT ARE "+str(value)+" M ")
-                    elif  self.varfrom.get() == "M":
-                        value = float(self.textname.get(1.0, END))/0.3048
-                        self.saveconvertion(value)
-                        msg.showinfo("M TO FT", str(float(self.textname.get(1.0, END)))+" M ARE " +str(value)+" FT ")
+                        self.ftmconvertion()
+                    else:  #self.varfrom.get() == "M":
+                        self.mtoftconvertion()
             except ValueError:
                 msg.showerror("Value Error", "Enter a number higher than zero")
                 self.cleart()
