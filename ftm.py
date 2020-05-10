@@ -99,7 +99,7 @@ class FtToM():
         msg.showinfo("FT TO M", str(float(self.textname.get(1.0, END)))+" FT ARE "+str(value)+" M ")
     def conv(self):
         """ convert button function """
-        if self.varfrom.get() == " " or self.varto.get() == " " or self.varfrom.get() == self.varto.get():
+        if  self.varfrom.get() == self.varto.get():
             msg.showerror("ERROR", "THIS CONVERTION CAN NOT BE DONE")
         else:
             try:
