@@ -106,7 +106,7 @@ class FtToM():
                 if float(self.textname.get(1.0, END)) > 0:
                     if self.varfrom.get() == "FT":
                         self.ftmconvertion()
-                    else:  #self.varfrom.get() == "M":
+                    elif  self.varfrom.get() == "M":
                         self.mtoftconvertion()
             except ValueError:
                 msg.showerror("Value Error", "Enter a number higher than zero")
