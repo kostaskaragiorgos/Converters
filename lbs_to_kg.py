@@ -79,11 +79,11 @@ class lbs_to_kg():
         with open('lbs_to_kg.csv', 'a+') as f:
             thewriter = csv.writer(f)
             thewriter.writerow([str(float(self.textname.get(1.0, END))), str(value)])
-    def libs_to_kg_convertion():
+    def libs_to_kg_convertion(self):
         value = float(self.textname.get(1.0, END))*0.45359237
         self.save_convertion(value)
         msg.showinfo("LBS TO KG", str(float(self.textname.get(1.0, END)))+" LBS ARE "+str(value)+" KG ")
-    def kg_to_libs_convertion():
+    def kg_to_libs_convertion(self):
         value = float(self.textname.get(1.0, END))*2.20462
         self.save_convertion(value)
         msg.showinfo("KG TO LBS", str(float(self.textname.get(1.0, END)))+" KG ARE " +str(value)+" LBS ")
