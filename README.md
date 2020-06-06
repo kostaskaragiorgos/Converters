@@ -49,12 +49,18 @@ You need to convert lbs to kg or vice versa
 
 ## Dependencies_libs_to_kg
 
+To install the dependencies
+
 <ul>
   <li> csv (conda install -c anaconda csvkit) </li>
   <li> second way to install csv( pip install python-csv) </li>
   <li> pandas (conda install -c anaconda pandas) </li>
   <li> second way to install pandas( pip install pandas) </li>
 </ul>
+
+```shell
+pip install -r requirements.txt
+```
 
 ## Current_Version_libs_to_kg
 
@@ -98,13 +104,21 @@ All project documentation is located in the `./doc/lbs to kg`  folder.
  
  ## Dependencies_ftm
 
+ To install the dependencies
+
  <ul>
   <li> csv (conda install -c anaconda csvkit) </li>
   <li> second way to install csv( pip install python-csv) </li>
   <li> pandas (conda install -c anaconda pandas) </li>
   <li> second way to install pandas( pip install pandas) </li>
 </ul>
- 
+
+or run
+
+```shell
+pip install -r requirements.txt
+```
+
 ## Current_Version_ftm
  
  <p><img src ="images/fttom/ft to m.png" title = "ft to m converter Version"/> </p>
