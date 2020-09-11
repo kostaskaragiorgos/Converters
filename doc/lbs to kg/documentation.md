@@ -35,3 +35,13 @@ You can show done convertions using menu Show --> Show Convertions or using Ctrl
 an informative message pops up
 
 <p><img src="doc images/show/show convertions pop up.png" title="Show convertions"/></p>
+
+# About menu
+
+You can show info about the app by using menu About --> About or using Ctrl+i keybind
+
+<p><img src="doc images/about/about menu.png" title="about menu"/></p>
+
+An informative message pops up
+
+<p><img src="doc images/about/about.png" title="about menu"/></p> 
